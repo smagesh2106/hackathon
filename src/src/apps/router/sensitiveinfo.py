@@ -34,6 +34,20 @@ async def get_prompt_byId(id:int, db: Session = Depends(get_db)):
     logger.error(f"Could not get sensitive prompt for id  = {id}, error:{repr(e)}")
     raise HTTPException( status_code=status.HTTP_400_BAD_REQUEST,detail=f"Sensitive prompt with ID={id} does not exist")
 
+#Query for a pattern
+@router.get("/query/{pattern}", response_model=ResponsePlain, status_code=200)
+async def query_prompt(pattern:str, db: Session = Depends(get_db)):
+  try:  
+    found = await service.query_prompt(db, pattern) 
+    if found:      
+      return ResponsePlain( status="success",  message="sensitive prompt retrieved successfully", data=jsonable_encoder("Found"))
+    else:
+      return ResponsePlain( status="failure",  message="sensitive prompt not found", data=jsonable_encoder("NOT Found"))
+
+  except Exception as e:
+    logger.error(f"Could not query sensitive prompt for prompt  = {pattern}, error:{repr(e)}")
+    raise HTTPException( status_code=status.HTTP_400_BAD_REQUEST,detail=f"Sensitive prompt with pattern={pattern} does not exist")
+
 #Create Department
 @router.post("/", response_model=ResponsePlain, status_code=201)
 #async def create_prompt(db: Session = Depends(get_db), prompt: str = Form(...)):  

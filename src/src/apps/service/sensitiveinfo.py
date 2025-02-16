@@ -50,6 +50,14 @@ async def get_byId(db: Session, id: int):
     raise CustomError(message=f"dept not found for id: {id}")
 
 
+async def query_prompt(db: Session, substring: str):
+  dept  = db.query(model.SensitiveInfo).filter(model.SensitiveInfo.info.like(f'%{substring}%')).first()
+  if dept:
+    return True
+  else:
+    return False
+
+
 async def create_info(db: Session, prompt: schema.SensitiveInfoInput):
   _db = model.SensitiveInfo(**prompt.model_dump())
   existing_info = db.scalar(select(model.SensitiveInfo).where(model.SensitiveInfo.info == prompt.info))
