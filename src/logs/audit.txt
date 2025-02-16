@@ -1,0 +1,16 @@
+Email: Unknown,	Method: PUT,	Path: /api/v1/auth/user/2,	Received at: 2024-08-02 18:45:55.463327
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/login,	Received at: 2024-08-02 18:47:05.655673
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/login,	Received at: 2024-08-02 18:47:32.626613
+Email: Unknown,	Method: DELETE,	Path: /api/v1/auth/user/2,	Received at: 2024-08-02 18:51:31.164043
+Email: Unknown,	Method: PUT,	Path: /api/v1/auth/user/18,	Received at: 2024-08-02 18:59:15.908057
+Email: Unknown,	Method: PUT,	Path: /api/v1/auth/user/18,	Received at: 2024-08-02 18:59:22.338621
+Email: Unknown,	Method: PUT,	Path: /api/v1/auth/user/18,	Received at: 2024-08-02 18:59:38.575839
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/login,	Received at: 2024-08-02 18:59:43.920696
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/login,	Received at: 2024-08-02 18:59:51.486127
+Email: Unknown,	Method: DELETE,	Path: /api/v1/auth/user/18,	Received at: 2024-08-02 19:08:41.110758
+Email: Unknown,	Method: DELETE,	Path: /api/v1/auth/user/33,	Received at: 2024-08-02 19:09:57.071827
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/user,	Received at: 2024-08-02 19:18:51.801306
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/login,	Received at: 2024-08-02 19:19:13.127113
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/logout,	Received at: 2024-08-02 19:19:26.051651
+Email: smagesh2106@gmail.com,	Method: POST,	Path: /api/v1/auth/logout,	Received at: 2024-08-02 19:19:30.567310
+Email: Unknown,	Method: POST,	Path: /api/v1/auth/forgot-password,	Received at: 2024-08-02 19:20:03.721035
